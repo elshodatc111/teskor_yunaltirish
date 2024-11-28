@@ -57,14 +57,14 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Tezkor yo‘naltirish',
+          'E-MAYOQ',
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Colors.teal,
         actions: [
           IconButton(
             onPressed: () {
-              Get.to(() => ProfilePage());
+              Get.to(() => const ProfilePage());
             },
             icon: const Icon(
               Icons.person,

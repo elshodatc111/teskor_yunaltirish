@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
+import 'package:intl/intl.dart';
 
 class HomeShowPage extends StatefulWidget {
   final int id;
@@ -50,6 +51,15 @@ class _HomeShowPageState extends State<HomeShowPage> {
       }
     } catch (e) {
       Get.snackbar('Xatolik', 'Tarmoqda muammo yuz berdi.');
+    }
+  }
+
+  String formatDate(String dateString) {
+    try {
+      final date = DateTime.parse(dateString);
+      return DateFormat('yyyy-MM-dd').format(date);
+    } catch (e) {
+      return 'Noma\'lum';
     }
   }
 
@@ -122,7 +132,7 @@ class _HomeShowPageState extends State<HomeShowPage> {
                   ),
                   const SizedBox(height: 8.0),
                   Text(
-                    'Tur: ${item!['type'] ?? 'Noma\'lum'}',
+                    'Ma`lumot turi : ${item!['type'] ?? 'Noma\'lum'}',
                     style: const TextStyle(
                         fontSize: 18, color: Colors.black87),
                   ),
@@ -155,7 +165,7 @@ class _HomeShowPageState extends State<HomeShowPage> {
                           color: Colors.grey),
                       const SizedBox(width: 8.0),
                       Text(
-                        'Tayyorlandi: ${item!['created_at'] ?? 'Noma\'lum'}',
+                        'Tayyorlandi: ${formatDate(item!['created_at'] ?? '')}',
                         style: const TextStyle(
                             fontSize: 16, color: Colors.grey),
                       ),

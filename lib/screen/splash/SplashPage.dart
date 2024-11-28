@@ -40,8 +40,7 @@ class SplashPage extends StatelessWidget {
               ),
               const SizedBox(height: 24.0),
               const Text(
-                'Respublika xududidan tashqariga chiqib ketmagan sud va tergov organlaridan qidruvda bo\'lgan '
-                '(bedarak yo\'qolgan shaxslar va shaxsni noaniq murdalar) shaxslarning elektron bazasi bo\'lgan',
+                'Respublika xududidan jinoyatlar obektlari va subektlari haqidagi tezkor malumotlarni markazlashtirilgan elektron bazasi bo\'lgan',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 18,
@@ -52,7 +51,7 @@ class SplashPage extends StatelessWidget {
               ),
               const SizedBox(height: 32.0),
               const Text(
-                'Tezkor yo‘naltirish',
+                'Tezkor yo‘naltirish "E-MAYOQ"',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 32,
@@ -62,7 +61,7 @@ class SplashPage extends StatelessWidget {
               ),
               const SizedBox(height: 16.0),
               const Text(
-                'platformasi',
+                'PLATFORMASI',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 18,
